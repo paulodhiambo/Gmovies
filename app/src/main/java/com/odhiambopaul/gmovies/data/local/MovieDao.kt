@@ -12,6 +12,9 @@ interface MovieDao {
     @Query("SELECT * FROM movies WHERE movieType =:movie_type")
     suspend fun getMovies(movie_type: MovieTypes): List<Movie>
 
+    @Query("SELECT * FROM movies WHERE id= :id")
+    suspend fun getMovieById(id: Int): Movie
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun saveMovie(movie: Movie)
 

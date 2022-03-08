@@ -1,6 +1,7 @@
 package com.odhiambopaul.gmovies.data.remote
 
 import com.odhiambopaul.gmovies.data.remote.dto.MovieDetailsResponse
+import com.odhiambopaul.gmovies.data.remote.dto.MovieTrailerResponse
 import com.odhiambopaul.gmovies.data.remote.dto.MoviesResponse
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -17,4 +18,7 @@ interface GMovieAPI {
 
     @GET("movie/{movie_id}")
     suspend fun getMovieDetails(@Path("movie_id") movieId: Int): MovieDetailsResponse
+
+    @GET("/movie/{movie_id}/videos")
+    suspend fun getMovieTrailer(@Path("movie_id") movieId: Int): MovieTrailerResponse
 }
