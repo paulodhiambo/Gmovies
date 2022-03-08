@@ -1,4 +1,4 @@
-package com.odhiambopaul.gmovies.ui.theme
+package com.odhiambopaul.gmovies.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 

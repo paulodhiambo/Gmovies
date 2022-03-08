@@ -1,4 +1,4 @@
-package com.odhiambopaul.gmovies
+package com.odhiambopaul.gmovies.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,7 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.odhiambopaul.gmovies.ui.theme.GmoviesTheme
+import com.odhiambopaul.gmovies.presentation.theme.GmoviesTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

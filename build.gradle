@@ -3,6 +3,7 @@ buildscript {
         compose_version = '1.1.1'
         lifecycle_runtime = '2.4.1'
         activity_compose = '1.4.0'
+        room_version = "2.4.2"
     }
 }// Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {

@@ -1,4 +1,4 @@
-package com.odhiambopaul.gmovies.ui.theme
+package com.odhiambopaul.gmovies.presentation.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
