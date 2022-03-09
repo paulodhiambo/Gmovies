@@ -51,10 +51,10 @@ There are a few ways to open this project.
 2. Android Studio -> File -> Open
 
 ### Application screenshots
+Home Screen             |  Detail Screen
+:-------------------------:|:-------------------------:
+![Home screen image](screenshots/home.png)  |  ![Detail screen image](screenshots/detail.png)
 
-![Home screen image](screenshots/home.png)
-
-![Detail screen image](screenshots/detail.png)
 
 ## License
 
