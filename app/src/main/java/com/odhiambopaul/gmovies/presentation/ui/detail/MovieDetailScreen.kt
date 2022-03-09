@@ -1,16 +1,19 @@
 package com.odhiambopaul.gmovies.presentation.ui.detail
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.odhiambopaul.gmovies.R
 import com.odhiambopaul.gmovies.common.Constants
 import com.odhiambopaul.gmovies.domain.model.Movie
 import com.odhiambopaul.gmovies.presentation.theme.shimmerHighLight
@@ -48,7 +51,11 @@ private fun MovieDetailHeader(
                 tilt = 20f
             ),
             failure = {
-                Text(text = "image request failed.")
+                Image(
+                    painter = painterResource(id = R.drawable.gmovie),
+                    contentDescription = "default image",
+                    modifier = Modifier.fillMaxSize()
+                )
             })
         Spacer(modifier = Modifier.height(25.dp))
         Text(
