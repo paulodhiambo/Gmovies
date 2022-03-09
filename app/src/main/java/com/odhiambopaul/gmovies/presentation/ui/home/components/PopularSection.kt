@@ -1,6 +1,7 @@
 package com.odhiambopaul.gmovies.presentation.ui.home.components
 
 import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.runtime.Composable
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -15,6 +16,13 @@ fun PopularSection(
     navController: NavController
 ) {
     val state = viewModel.popularMovieState.value
+    if (state.isLoading && state.movies.isEmpty()) {
+        LazyRow {
+            items(5) {
+                Shimmer()
+            }
+        }
+    }
     LazyRow {
         items(state.movies.size) {
             state.movies[it]?.let { movie ->

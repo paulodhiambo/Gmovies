@@ -15,6 +15,13 @@ fun TopRatedSection(
     navController: NavController
 ) {
     val state = viewModel.topRatedMoviesState.value
+    if (state.isLoading && state.movies.isEmpty()) {
+        LazyRow {
+            items(5) {
+                Shimmer()
+            }
+        }
+    }
     LazyRow {
         items(state.movies.size) {
             state.movies[it]?.let { movie ->

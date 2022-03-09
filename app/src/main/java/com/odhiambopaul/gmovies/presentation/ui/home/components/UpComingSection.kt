@@ -15,6 +15,13 @@ fun UpComingSection(
     navController: NavController
 ) {
     val state = viewModel.upComingMoviesState.value
+    if (state.isLoading && state.movies.isEmpty()) {
+        LazyRow {
+            items(5) {
+                Shimmer()
+            }
+        }
+    }
     LazyRow {
         items(state.movies.size) {
             state.movies[it]?.let { movie ->
