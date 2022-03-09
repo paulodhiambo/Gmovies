@@ -19,4 +19,5 @@ data class Movie(
     val title: String,
     val video: Boolean,
     val movieType: MovieTypes
+
 )

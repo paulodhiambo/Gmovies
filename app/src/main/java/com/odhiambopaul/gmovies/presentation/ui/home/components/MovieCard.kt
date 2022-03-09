@@ -16,6 +16,7 @@ import androidx.compose.ui.unit.dp
 import com.odhiambopaul.gmovies.common.Constants.SMALL_IMAGE_PATH
 import com.odhiambopaul.gmovies.domain.model.Movie
 import com.odhiambopaul.gmovies.presentation.theme.shimmerHighLight
+import com.skydoves.landscapist.CircularReveal
 import com.skydoves.landscapist.ShimmerParams
 import com.skydoves.landscapist.glide.GlideImage
 
@@ -48,6 +49,7 @@ fun MovieCard(
                 dropOff = 0.65f,
                 tilt = 20f
             ),
+            circularReveal = CircularReveal(duration = 350),
             failure = {
                 Text(text = "image request failed.")
             })

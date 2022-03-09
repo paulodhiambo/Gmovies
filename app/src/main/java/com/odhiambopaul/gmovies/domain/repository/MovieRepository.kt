@@ -2,7 +2,6 @@ package com.odhiambopaul.gmovies.domain.repository
 
 import com.odhiambopaul.gmovies.common.MovieTypes
 import com.odhiambopaul.gmovies.data.remote.dto.MovieDetailsResponse
-import com.odhiambopaul.gmovies.data.remote.dto.MovieTrailerResponse
 import com.odhiambopaul.gmovies.data.remote.dto.MoviesResponse
 import com.odhiambopaul.gmovies.domain.model.Movie
 
@@ -21,5 +20,4 @@ interface MovieRepository {
 
     suspend fun getLocalMovieById(id: Int): Movie
 
-    suspend fun getMovieTrailer(id: Int): MovieTrailerResponse
 }

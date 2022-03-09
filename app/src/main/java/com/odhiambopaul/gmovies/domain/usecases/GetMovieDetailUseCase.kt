@@ -18,10 +18,10 @@ class GetMovieDetailUseCase @Inject constructor(private val repository: MovieRep
             val movie = repository.getMovieDetails(id).toMovie(movieType = MovieTypes.POPULAR)
             emit(Resource.Success(movie))
         } catch (e: HttpException) {
+            emit(Resource.Error(e.localizedMessage ?: "Movie with the id $id not found"))
+        } catch (e: IOException) {
             //fall back to local database
             emit(Resource.Success(repository.getLocalMovieById(id)))
-        } catch (e: IOException) {
-            emit(Resource.Error(e.localizedMessage ?: "Movie with the id $id not found"))
         }
     }
 }

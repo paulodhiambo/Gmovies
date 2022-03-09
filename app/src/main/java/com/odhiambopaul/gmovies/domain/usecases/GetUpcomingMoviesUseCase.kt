@@ -21,11 +21,11 @@ class GetUpcomingMoviesUseCase @Inject constructor(private val repository: Movie
             emit(Resource.Success(movies))
 
         } catch (e: HttpException) {
+            emit(Resource.Error(e.localizedMessage ?: "An error occurred"))
+        } catch (e: IOException) {
             //On network error, fallback to the local database
             val movies = repository.getLocalMovies(MovieTypes.UPCOMING)
             emit(Resource.Success(movies))
-        } catch (e: IOException) {
-            emit(Resource.Error(e.localizedMessage ?: "An error occurred"))
         }
     }
 }

@@ -4,7 +4,6 @@ import com.odhiambopaul.gmovies.common.MovieTypes
 import com.odhiambopaul.gmovies.data.local.MovieDao
 import com.odhiambopaul.gmovies.data.remote.GMovieAPI
 import com.odhiambopaul.gmovies.data.remote.dto.MovieDetailsResponse
-import com.odhiambopaul.gmovies.data.remote.dto.MovieTrailerResponse
 import com.odhiambopaul.gmovies.data.remote.dto.MoviesResponse
 import com.odhiambopaul.gmovies.domain.model.Movie
 import com.odhiambopaul.gmovies.domain.repository.MovieRepository
@@ -29,6 +28,4 @@ class MovieRepositoryImpl @Inject constructor(
     override suspend fun saveMovieLocally(movie: Movie) = movieDao.saveMovie(movie)
 
     override suspend fun getLocalMovieById(id: Int): Movie = movieDao.getMovieById(id)
-
-    override suspend fun getMovieTrailer(id: Int): MovieTrailerResponse = api.getMovieTrailer(id)
 }

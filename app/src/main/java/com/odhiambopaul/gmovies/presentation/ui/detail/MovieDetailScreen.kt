@@ -35,12 +35,11 @@ private fun MovieDetailHeader(
     viewModel: DetailViewModel = hiltViewModel()
 ) {
     val movie: Movie? = viewModel.movieDetailState.value.movie
-    val movieTrailer = viewModel.movieTrailerDataState.value.trailer
     Column {
         GlideImage(
-            imageModel = "${Constants.LARGE_IMAGE_PATH}${movie?.posterPath}",
+            imageModel = "${Constants.LARGE_IMAGE_PATH}${movie?.backdropPath}",
             modifier = Modifier
-                .height(320.dp),
+                .height(400.dp),
             shimmerParams = ShimmerParams(
                 baseColor = MaterialTheme.colors.background,
                 highlightColor = shimmerHighLight,
@@ -51,9 +50,7 @@ private fun MovieDetailHeader(
             failure = {
                 Text(text = "image request failed.")
             })
-
         Spacer(modifier = Modifier.height(25.dp))
-
         Text(
             text = movie?.title ?: "",
             style = MaterialTheme.typography.h5,
@@ -66,9 +63,7 @@ private fun MovieDetailHeader(
                 .fillMaxWidth()
                 .padding(horizontal = 8.dp)
         )
-
         Spacer(modifier = Modifier.height(6.dp))
-
         Text(
             text = "Release Date: ${movie?.releaseDate}",
             style = MaterialTheme.typography.body1,
@@ -81,7 +76,6 @@ private fun MovieDetailHeader(
                 .fillMaxWidth()
                 .padding(horizontal = 8.dp)
         )
-
         Spacer(modifier = Modifier.height(8.dp))
     }
 }
@@ -92,9 +86,7 @@ private fun MovieDetailSummary(
 ) {
     val movie: Movie? = viewModel.movieDetailState.value.movie
     Column {
-
         Spacer(modifier = Modifier.height(23.dp))
-
         Text(
             text = "Summary",
             style = MaterialTheme.typography.h6,
@@ -106,9 +98,7 @@ private fun MovieDetailSummary(
                 .fillMaxWidth()
                 .padding(horizontal = 15.dp)
         )
-
         Spacer(modifier = Modifier.height(8.dp))
-
         Text(
             text = movie?.overview ?: "",
             style = MaterialTheme.typography.body1,
@@ -118,7 +108,6 @@ private fun MovieDetailSummary(
                 .fillMaxWidth()
                 .padding(horizontal = 15.dp)
         )
-
         Spacer(modifier = Modifier.height(15.dp))
     }
 }
