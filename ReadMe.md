@@ -32,7 +32,8 @@ the libraries are in the stable version.
     * [Landscapist](https://github.com/skydoves/landscapist) - Load and cache images for offline
       capabilities
 * Architecture
-    * MVVM - application level
+    * [MVVM](https://developer.android.com/jetpack/guide?gclid=CjwKCAiAvaGRBhBlEiwAiY-yMLJgFw8dtzM8r78wKMlnykKhTDwh5vx4ZOGqGBbXQ8PEFlYsS_b_oBoCRGoQAvD_BwE&gclsrc=aw.ds)
+        - Makes it easier to write modular, reusable and easy to test code
     * [Android Architecture components](https://developer.android.com/topic/libraries/architecture)
     * [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel)
 
@@ -50,11 +51,16 @@ There are a few ways to open this project.
 1. Run `git@github.com:paulodhiambo/Gmovies.git`
 2. Android Studio -> File -> Open
 
+### features to be completed
+
+1. Movie search functionality
+2. Movie filter functionality
+
 ### Application screenshots
+
 Home Screen             |  Detail Screen
 :-------------------------:|:-------------------------:
 ![Home screen image](screenshots/home.png)  |  ![Detail screen image](screenshots/detail.png)
-
 
 ## License
 
