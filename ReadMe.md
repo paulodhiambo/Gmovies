@@ -50,6 +50,12 @@ There are a few ways to open this project.
 1. Run `git@github.com:paulodhiambo/Gmovies.git`
 2. Android Studio -> File -> Open
 
+### Application screenshots
+
+![Home screen image](screenshots/home.png)
+
+![Detail screen image](screenshots/detail.png)
+
 ## License
 
  ```
