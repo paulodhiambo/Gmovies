@@ -62,6 +62,9 @@ Home Screen             |  Detail Screen
 :-------------------------:|:-------------------------:
 ![Home screen image](screenshots/home.png)  |  ![Detail screen image](screenshots/detail.png)
 
+### Build status
+[![Build status](https://build.appcenter.ms/v0.1/apps/36c279f3-a606-49d8-863e-431cc1cc9a15/branches/master/badge)](https://appcenter.ms)
+
 ## License
 
  ```
